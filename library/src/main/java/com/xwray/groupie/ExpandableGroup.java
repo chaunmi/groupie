@@ -148,7 +148,7 @@ public class ExpandableGroup extends NestedGroup {
     }
 
     public int getGroupCount() {
-        return 1 + (isExpanded ? children.size() : 0);
+       return 1 + (isExpanded ? children.size() : 0);
     }
 
     public int getChildCount() {
@@ -251,5 +251,16 @@ public class ExpandableGroup extends NestedGroup {
         if (isExpanded) {
             super.onDataSetInvalidated();
         }
+    }
+
+    @Override
+    public int getChildLeafCount() {
+        int size = 0;
+        int childCount = getChildCount();
+        for (int i = 0; i < childCount; i++) {
+            Group group = children.get(i);
+            size += group.getChildLeafCount();
+        }
+        return size;
     }
 }

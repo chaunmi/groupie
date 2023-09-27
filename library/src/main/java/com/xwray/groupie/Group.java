@@ -7,6 +7,7 @@ import androidx.annotation.NonNull;
  */
 public interface Group {
 
+    int getChildLeafCount();
     int getItemCount();
 
     @NonNull Item getItem(int position);

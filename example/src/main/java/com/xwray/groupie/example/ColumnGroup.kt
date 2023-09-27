@@ -1,5 +1,6 @@
 package com.xwray.groupie.example
 
+import com.xwray.groupie.ExpandableGroup
 import com.xwray.groupie.Group
 import com.xwray.groupie.GroupDataObserver
 import com.xwray.groupie.Item
@@ -43,6 +44,10 @@ class ColumnGroup(items: List<Item<*>>) : Group {
 
     override fun getPosition(item: Item<*>): Int {
         return items.indexOf(item)
+    }
+
+    override fun getChildLeafCount(): Int {
+        return itemCount
     }
 
     override fun getItemCount(): Int {

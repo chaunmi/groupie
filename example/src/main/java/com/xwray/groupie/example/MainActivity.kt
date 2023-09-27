@@ -148,9 +148,82 @@ class MainActivity : AppCompatActivity() {
         // Expandable group
         val expandableHeaderItem = ExpandableHeaderItem(R.string.expanding_group, R.string.expanding_group_subtitle)
         this += ExpandableGroup(expandableHeaderItem).apply {
-            for (i in 0..1) {
-                add(CardItem(rainbow200[1]))
+            for (i in 0..5) {
+                add(CardItem(rainbow200[1], text = i.toString(), level = 1))
             }
+            val expandableHeaderItem2 = ExpandableHeaderItem(R.string.expanding_group_ext, R.string.expanding_group_subtitle, level = 1)
+            add(ExpandableGroup(expandableHeaderItem2).apply {
+                for(i in 0..40) {
+                    add(CardItem(rainbow200[2], text = i.toString(), level = 2))
+                }
+            })
+            val expandableHeaderItem3 = ExpandableHeaderItem(R.string.expanding_group_ext, R.string.expanding_group_subtitle, level = 1)
+            add(ExpandableGroup(expandableHeaderItem3).apply {
+                for(i in 0..40) {
+                    add(CardItem(rainbow200[3], text = i.toString(), level = 2))
+                }
+            })
+
+
+            val expandableHeaderItem4 = ExpandableHeaderItem(R.string.expanding_group_ext, R.string.expanding_group_subtitle, level = 1)
+            add(ExpandableGroup(expandableHeaderItem4).apply {
+                for(i in 0..40) {
+                    add(CardItem(rainbow200[4], text= i.toString(), level = 2))
+                }
+            })
+            val expandableHeaderItem5 = ExpandableHeaderItem(R.string.expanding_group_ext, R.string.expanding_group_subtitle, level = 1)
+            add(ExpandableGroup(expandableHeaderItem5).apply {
+                for(i in 0..40) {
+                    add(CardItem(rainbow200[5], text = i.toString(), level = 2))
+                }
+            })
+            val expandableHeaderItem6 = ExpandableHeaderItem(R.string.expanding_group_ext, R.string.expanding_group_subtitle, level = 1)
+            add(ExpandableGroup(expandableHeaderItem6).apply {
+                for(i in 0..40) {
+                    add(CardItem(rainbow200[6], text = i.toString(),  level = 2))
+                }
+            })
+            val expandableHeaderItem7 = ExpandableHeaderItem(R.string.expanding_group_ext, R.string.expanding_group_subtitle, level = 1)
+            add(ExpandableGroup(expandableHeaderItem7).apply {
+                val expandableHeaderItem71 = ExpandableHeaderItem(R.string.expanding_group_ext, R.string.expanding_group_subtitle, level = 2)
+                add(ExpandableGroup(expandableHeaderItem71).apply {
+                    for(i in 0..100) {
+                        add(CardItem(rainbow200[5], text = i.toString(),  level = 3))
+                    }
+                })
+                val expandableHeaderItem72 = ExpandableHeaderItem(R.string.expanding_group_ext, R.string.expanding_group_subtitle, level = 2)
+                add(ExpandableGroup(expandableHeaderItem72).apply {
+                    for(i in 0..100) {
+                        add(CardItem(rainbow200[5], text = i.toString(),  level = 3))
+                    }
+                })
+                val expandableHeaderItem73 = ExpandableHeaderItem(R.string.expanding_group_ext, R.string.expanding_group_subtitle, level = 2)
+                add(ExpandableGroup(expandableHeaderItem73).apply {
+                    for(i in 0..100) {
+                        add(CardItem(rainbow200[5], text = i.toString(),  level = 3))
+                    }
+                })
+                val expandableHeaderItem74 = ExpandableHeaderItem(R.string.expanding_group_ext, R.string.expanding_group_subtitle, level = 2)
+                add(ExpandableGroup(expandableHeaderItem74).apply {
+                    for(i in 0..100) {
+                        add(CardItem(rainbow200[5], text = i.toString(), level = 3))
+                    }
+                })
+
+            })
+
+            val expandableHeaderItem8 = ExpandableHeaderItem(R.string.expanding_group_ext, R.string.expanding_group_subtitle, level = 1)
+            add(ExpandableGroup(expandableHeaderItem8).apply {
+                for(i in 0..40) {
+                    add(CardItem(rainbow200[6], text = i.toString(), level = 2))
+                }
+            })
+            val expandableHeaderItem9 = ExpandableHeaderItem(R.string.expanding_group_ext, R.string.expanding_group_subtitle, level = 1)
+            add(ExpandableGroup(expandableHeaderItem9).apply {
+                for(i in 0..40) {
+                    add(CardItem(rainbow200[6], text = i.toString(), level = 2))
+                }
+            })
         }
 
         // Reordering a Section of Expandable Groups

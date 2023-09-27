@@ -495,4 +495,15 @@ public class Section extends NestedGroup {
         }
         return 0;
     }
+
+    @Override
+    public int getChildLeafCount() {
+        int size = 0;
+        int childCount = children.size();
+        for (int i = 0; i < childCount; i++) {
+            Group group = children.get(i);
+            size += group.getChildLeafCount();
+        }
+        return size;
+    }
 }

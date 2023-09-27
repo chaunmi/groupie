@@ -76,6 +76,16 @@ public class UpdatingGroup extends NestedGroup {
         }
     }
 
+    @Override
+    public int getChildLeafCount() {
+        int size = 0;
+        for (int i = 0; i < getGroupCount(); i++) {
+            Group group = getGroup(i);
+            size += group.getChildLeafCount();
+        }
+        return size;
+    }
+
     private class UpdatingCallback extends DiffUtil.Callback {
 
         private List<? extends Item> newList;

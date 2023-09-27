@@ -119,6 +119,11 @@ public abstract class Item<VH extends GroupieViewHolder> implements Group, SpanS
     }
 
     @Override
+    public int getChildLeafCount() {
+        return 1;
+    }
+
+    @Override
     @NonNull
     public Item getItem(int position) {
         if (position == 0) {
